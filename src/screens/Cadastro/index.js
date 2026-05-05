@@ -28,12 +28,9 @@ export default function Cadastro({ navigation, route }) {
         }
 
         // Se contato tem ID, é edição. Caso contrário, será criação
-        const acao = contato?.id
-        if (contato?.id) {
-            acao = updateContact(contato.id, nomeLimpo, telefoneLimpo);
-        } else {
-            acao = saveContact(nomeLimpo, telefoneLimpo);
-        }
+        const acao = contato?.id ?
+        updateContact(contato.id, nomeLimpo, telefoneLimpo):
+        saveContact(nomeLimpo, telefoneLimpo);
 
         acao
             .then(() => navigation.goBack())

@@ -59,7 +59,7 @@ export default function Lista({ navigation }) {
         <Text style={styles.telefone}>{item.telefone}</Text>
       </Pressable>
 
-      {/*Botão de remover agora chama confirmarRemocao */}
+      {/* ✅ Botão de remover agora chama confirmarRemocao */}
       <TouchableOpacity
         style={styles.remover}
         onPress={() => confirmarRemocao(item.id)}
